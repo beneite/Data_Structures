@@ -30,6 +30,11 @@ public class FilterMethod {
 				List<String> lStr2=Arrays.asList(str2);
 				int count2=(int) lStr2.stream().filter(s->s.isEmpty()).count();
 				System.out.println("Number of empty Strings are: "+count2);
+				
+		// Example 4: Using forEach()....
+				List<Integer> lr=Arrays.asList(10,12,20,32,40);
+				System.out.println("O/P after using forEach(): ");
+				lr.stream().filter(n->n%10==0).forEach(n->System.out.print(n+" "));
 	}
 
 }
