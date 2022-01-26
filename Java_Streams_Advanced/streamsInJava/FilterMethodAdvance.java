@@ -4,6 +4,7 @@
 package streamsInJava;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 class Laptop
 {
@@ -40,7 +41,11 @@ public class FilterMethodAdvance {
 		arrLp.add(new Laptop(5,"Lenevo Laptops", 65000));
 		arrLp.add(new Laptop(6,"Acer Laptops", 85000));
 		
+		Predicate<Laptop> pr=n->n.price>50000;
+		
+		// Method 1: using Lambda statement directly....
 		arrLp.stream().filter(p->p.price>50000).forEach(p->p.displayDetails());
+		
 	}
 
 }
