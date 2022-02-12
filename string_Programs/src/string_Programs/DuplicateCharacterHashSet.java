@@ -6,7 +6,7 @@ public class DuplicateCharacterHashSet {
 	
 	public static void duplicateCharacter(String str) {
 		
-		HashSet hs=new HashSet();
+		HashSet<Character> hs=new HashSet<Character>();
 		
 		for(int i=0;i<str.length();i++) {
 			hs.add(str.charAt(i));
